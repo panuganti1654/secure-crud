@@ -1,3 +1,12 @@
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://securecrud-mongo:27017/securecrud", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log("Mongo Connected"))
+.catch(err => console.log(err));
+
 const express = require("express");
 const app = express();
 
